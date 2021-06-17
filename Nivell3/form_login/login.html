@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel=stylesheet href="login.css" TYPE="text/css" media=screen> 
+</head>
+
+<body>
+ 
+<div id="logo"> 
+  <h1><i> Login</i></h1>
+</div> 
+<section class="login">
+  
+  <form id="loginDatos">
+    <ul>
+     
+     <li>
+       <input id="correo" name="correo" type="text" placeholder="Correo" class="validate[required,custom[email]]"
+       data-errormessage-value-missing="El campo Correo es obligatorio"
+       data-errormessage-custom-error="Formato:usuario@mail.com" value=""/>
+      </li>
+      <li>
+        <input id="contraseña" name="contraseña" type="password" minlength=8 maxlength=15 placeholder="Contraseña" class="validate[required]"
+        data-errormessage-value-missing="El campo Contraseña es obligatorio" value=""/>
+     </li>
+      
+      
+      <input type="submit" value="Loguéate">
+      <li><span id="mensaje">Logueado</span></li>
+    </ul>
+  </form>
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/languages/jquery.validationEngine-es.min.js" integrity="sha512-GCKyaseskD91hTJv68w+ldDh2vU5iURF1/pIDyAY+Bv3MZhceURuVe3GZMgPXYUb+W41oTHz2CRrTOhkdvE6SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery.validationEngine.min.js" integrity="sha512-MKqdT8JgKftxlK6oK4S+Hh44ivKyaPncl6qN9JZEGKJGQZJMiSoPzehLcbvd/1XMieEP1Q4A3wzzhTrvBUUcUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  $(document).ready(()=>{
+   $('#loginDatos').validationEngine();
+});
+</script>
+</body>
+
+</html>
